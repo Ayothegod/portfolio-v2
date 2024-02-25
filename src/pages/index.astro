@@ -1,22 +1,16 @@
 ---
-import "@/styles/globals.css";
-import { Button } from "../components/ui/button";
+// import { Button } from "../components/ui/button";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Ayomide Portfolio</title>
-  </head>
-  <body>
-    <!-- <Button variant="destructive" id="toggleMode">enter dark mode</Button> -->
-  </body>
-</html>
+<MainLayout title="Adebisi Ayomide - Fullstack web developer" description="Portfolio for all my full stack development works">
+  <main>
+	<p>Hello Home pagers</p>
+</main>
+</MainLayout>
 
-<script>
+<!-- <Button variant="destructive" id="toggleMode">enter dark mode</Button> -->
+<!-- <script>
   const toggleModeButton = document.getElementById("toggleMode");
   const body = document.body;
 
@@ -25,4 +19,4 @@ import { Button } from "../components/ui/button";
       body.classList.toggle("dark");
     });
   }
-</script>
+</script> -->
