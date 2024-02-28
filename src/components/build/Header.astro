@@ -14,7 +14,7 @@ const name = ""
 </header>
 
 <script>
-  import {$users, $addUser, $toggleTheme} from "../../store/theme"
+  import {$users, $addUser, $toggleTheme,  $currentTheme, $updateCurrentTheme} from "../../store/theme"
   // document.getElementById("addUserButton")?.addEventListener("click", () => {
   //   $addUser({name:'Ayomide', age: 20})
   // })
@@ -49,9 +49,14 @@ const name = ""
   // if (themeToggleButton) {
   //   themeToggleButton.addEventListener("click", toggleTheme);
   // }
-
+  // import { $currentTheme, $updateCurrentTheme } from "../store/theme";
   const themeToggleButton = document.getElementById("darkModeToggle");
   const html = document.querySelector("html");
+  $currentTheme.subscribe(theme => {
+    console.log({theme})
+    // html?.classList.replace("dark", "light")
+  })
+
   if (themeToggleButton) {
     themeToggleButton.addEventListener("click", () => {
       $toggleTheme(html)

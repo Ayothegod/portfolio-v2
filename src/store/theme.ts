@@ -36,7 +36,7 @@ export function $toggleTheme(html: any) {
   $updateCurrentTheme()
 }
 
-export const $currentTheme = atom("dark");
+export const $currentTheme = atom("");
 
 export function $updateCurrentTheme() {
   const currentTheme = localStorage.getItem("theme");
