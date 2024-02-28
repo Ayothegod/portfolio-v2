@@ -1,48 +1,32 @@
-// store/users.ts
 import { atom } from "nanostores";
-
-interface User {
-  name: string;
-  age: number;
-}
-
-export const $users = atom<User[]>([]);
-
-export function $addUser(user: User) {
-  $users.set([...$users.get(), user]);
-}
+const html = document.querySelector("html");
 
 export function $setThemePreference(theme: any) {
-  if (typeof localStorage !== "undefined") {
+    if (typeof localStorage !== "undefined") {
     localStorage.setItem("theme", theme);
   } else {
     console.error("localStorage is not supported in this browser.");
-    console.log("set theme preference: false");
   }
 }
 
-export function $applyTheme(html: any) {
+export function $applyTheme() {
   if (html !== null) {
     html.classList.toggle("dark");
-    // , theme === "dark"
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "dark") {
+      html.classList.add("dark");
+    } else {
+      html.classList.remove("dark");
+    }
   }
 }
 
-export function $toggleTheme(html: any) {
+export function $toggleTheme() {
   const currentTheme = localStorage.getItem("theme");
-  const newTheme = currentTheme === "light" ? "dark" : "light";
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
   $setThemePreference(newTheme);
   $applyTheme(html);
-  $updateCurrentTheme()
 }
+const localStorageTheme = localStorage.getItem("theme");
 
-export const $currentTheme = atom("");
-
-export function $updateCurrentTheme() {
-  const currentTheme = localStorage.getItem("theme");
-  
-  if (currentTheme) {
-      $currentTheme.set(currentTheme);
-  }
-}
-
+export const $currentTheme = atom(localStorageTheme);

@@ -1,6 +1,5 @@
 ---
 import { Button } from "../ui/button";
-const name = ""
 ---
 
 <header class="flex justify-center">
@@ -14,53 +13,28 @@ const name = ""
 </header>
 
 <script>
-  import {$users, $addUser, $toggleTheme,  $currentTheme, $updateCurrentTheme} from "../../store/theme"
-  // document.getElementById("addUserButton")?.addEventListener("click", () => {
-  //   $addUser({name:'Ayomide', age: 20})
-  // })
+  import {
+    $toggleTheme,
+    $applyTheme,
+    $currentTheme,
+    $setThemePreference,
+  } from "../../store/theme";
 
-  // $users.subscribe(user => {
-  //   console.log(user);
-  // })
-
-  // function setThemePreference(theme: any) {
-  //   if (typeof localStorage !== "undefined") {
-  //     localStorage.setItem("theme", theme);
-  //   } else {
-  //     console.error("localStorage is not supported in this browser.");
-  //   }
-  // }
-
-  // function toggleTheme() {
-  //   const currentTheme = localStorage.getItem("theme");
-  //   const newTheme = currentTheme === "light" ? "dark" : "light";
-  //   setThemePreference(newTheme);
-  //   applyTheme(newTheme);
-  // }
-
-  // function applyTheme(theme: any) {
-  //   if (html !== null) {
-  //     html.classList.toggle("dark", theme === "dark");
-  //   }
-  // }
-
-  // const themeToggleButton = document.getElementById("darkModeToggle");
-  // const html = document.querySelector("html");
-  // if (themeToggleButton) {
-  //   themeToggleButton.addEventListener("click", toggleTheme);
-  // }
-  // import { $currentTheme, $updateCurrentTheme } from "../store/theme";
   const themeToggleButton = document.getElementById("darkModeToggle");
   const html = document.querySelector("html");
-  $currentTheme.subscribe(theme => {
-    console.log({theme})
-    // html?.classList.replace("dark", "light")
-  })
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const currentTheme = $currentTheme.get();
+
+    if (currentTheme === null) {
+      $setThemePreference("dark");
+    }
+    $applyTheme();
+  });
 
   if (themeToggleButton) {
     themeToggleButton.addEventListener("click", () => {
-      $toggleTheme(html)
+      $toggleTheme();
     });
   }
-  
 </script>
