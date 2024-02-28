@@ -7,36 +7,55 @@ const name = ""
   <div class="fixed inset-x-0 top-0 max-w-full mt-3 mx-4 bg-white">
     <div>
       <Button variant="destructive" id="darkModeToggle">enter dark mode</Button>
+
+      <Button variant="secondary" id="addUserButton">Add User</Button>
     </div>
   </div>
 </header>
 
 <script>
-  function setThemePreference(theme: any) {
-    if (typeof localStorage !== "undefined") {
-      localStorage.setItem("theme", theme);
-    } else {
-      console.error("localStorage is not supported in this browser.");
-    }
-  }
+  import {$users, $addUser, $toggleTheme} from "../../store/theme"
+  // document.getElementById("addUserButton")?.addEventListener("click", () => {
+  //   $addUser({name:'Ayomide', age: 20})
+  // })
 
-  function toggleTheme() {
-    const currentTheme = localStorage.getItem("theme");
-    const newTheme = currentTheme === "light" ? "dark" : "light";
-    setThemePreference(newTheme);
-    applyTheme(newTheme);
-  }
+  // $users.subscribe(user => {
+  //   console.log(user);
+  // })
 
-  function applyTheme(theme: any) {
-    if (html !== null) {
-      html.classList.toggle("dark", theme === "dark");
-    }
-  }
+  // function setThemePreference(theme: any) {
+  //   if (typeof localStorage !== "undefined") {
+  //     localStorage.setItem("theme", theme);
+  //   } else {
+  //     console.error("localStorage is not supported in this browser.");
+  //   }
+  // }
+
+  // function toggleTheme() {
+  //   const currentTheme = localStorage.getItem("theme");
+  //   const newTheme = currentTheme === "light" ? "dark" : "light";
+  //   setThemePreference(newTheme);
+  //   applyTheme(newTheme);
+  // }
+
+  // function applyTheme(theme: any) {
+  //   if (html !== null) {
+  //     html.classList.toggle("dark", theme === "dark");
+  //   }
+  // }
+
+  // const themeToggleButton = document.getElementById("darkModeToggle");
+  // const html = document.querySelector("html");
+  // if (themeToggleButton) {
+  //   themeToggleButton.addEventListener("click", toggleTheme);
+  // }
 
   const themeToggleButton = document.getElementById("darkModeToggle");
   const html = document.querySelector("html");
   if (themeToggleButton) {
-    themeToggleButton.addEventListener("click", toggleTheme);
+    themeToggleButton.addEventListener("click", () => {
+      $toggleTheme(html)
+    });
   }
   
 </script>

@@ -14,6 +14,16 @@ const { title, description } = Astro.props;
   <HeadLayout title={title} description={description} />
   <body>
     <Header />
+    <!-- <p class="mt-48">{themeValue ? "" : ""}</p> -->
     <slot />
   </body>
 </html>
+
+<script>
+  import { $currentTheme, $updateCurrentTheme } from "../store/theme";
+  $currentTheme.subscribe(theme => {
+    const themeValue = theme
+    console.log(themeValue)
+  })
+
+</script>
