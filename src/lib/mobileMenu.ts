@@ -30,9 +30,9 @@ export const mobileMenuIcons: Icon[] = [
     icon: "icons/Message - Outline",
     activeIcon: "icons/Message - Fill",
   },
-  {
-    href: "/more",
-    icon: "icons/More - Outline",
-    activeIcon: "icons/More - Fill",
-  },
+  // {
+  //   href: "",
+  //   icon: "icons/More - Outline",
+  //   activeIcon: "icons/More - Fill",
+  // },
 ];

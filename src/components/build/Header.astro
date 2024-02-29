@@ -5,26 +5,30 @@ import { Button } from "../ui/button";
 import { mobileMenuIcons } from "../../lib/mobileMenu";
 
 const currentUrl = Astro.url?.pathname;
-// console.log(currentUrl)
 ---
 
 <header class="flex justify-center">
   <Button id="darkModeToggle" variant="secondary">Toggle Mode</Button>
+  <!-- TODO: make sure to refactor the color used, that is rgba styles to match everything both in link too -->
   <div
-    class="fixed inset-x-0 bottom-6 rounded-2xl max-w-full mt-3 mx-4 p-3 bg-[rgba(0,0,0,.1)] dark:bg-[rgba(0,0,0,.4)] backdrop-blur-lg shadow-lg"
+    class="fixed inset-x-0 bottom-6 rounded-2xl max-w-full mt-3 mx-4 p-3 bg-[rgba(0,0,0,.1)] dark:bg-[rgba(0,0,0,.4)] backdrop-blur-lg"
   >
-    <div class="grid grid-cols-6 gap-4">
+    <div class="grid grid-cols-6 gap-4 items-center">
       {
         mobileMenuIcons.map((menu) => (
           <Link
             href={menu.href}
             text={false}
-            styles={`p-2 rounded-lg text-2xl ${currentUrl === menu.href && "bg-[rgba(0,0,0,.1)] dark:bg-[rgba(225,225,225,.1)]"}`}
+            styles={`p-2 rounded-lg text-2xl hover:bg-[rgba(0,0,0,.1)] dark:hover:bg-gray-400/30 ${currentUrl === menu.href && "bg-[rgba(0,0,0,.1)] dark:bg-[rgba(225,225,225,.1)]"}`}
             icon={currentUrl === menu.href ? menu.activeIcon : menu.icon}
             iconPosition="left"
           />
-        ))
-      }
+          ))
+        }
+        <Button id="darkModeToggle" variant="ghost">
+          <!-- TODO: make a menu that opens when i click on this button, and make the icon change too -->
+          <Icon name="icons/More - Outline" class="text-2xl"/>
+        </Button>
     </div>
   </div>
 </header>
