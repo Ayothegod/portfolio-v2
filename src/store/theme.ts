@@ -1,7 +1,7 @@
 import { atom } from "nanostores";
 const html = document.querySelector("html");
 
-export function $setThemePreference(theme: any) {
+export function $setThemePreference(theme: string) {
     if (typeof localStorage !== "undefined") {
     localStorage.setItem("theme", theme);
   } else {
@@ -25,8 +25,8 @@ export function $toggleTheme() {
   const currentTheme = localStorage.getItem("theme");
   const newTheme = currentTheme === "dark" ? "light" : "dark";
   $setThemePreference(newTheme);
-  $applyTheme(html);
+  $applyTheme();
 }
-const localStorageTheme = localStorage.getItem("theme");
 
+const localStorageTheme = localStorage.getItem("theme");
 export const $currentTheme = atom(localStorageTheme);
