@@ -1,4 +1,5 @@
 ---
+import { Button } from "@/components/ui/button";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
@@ -6,6 +7,8 @@ import MainLayout from "../layouts/MainLayout.astro";
   title="Adebisi Ayomide - Fullstack web developer"
   description="Portfolio for all my full stack development works"
 >
-  <main class="dark min-h-[100vh]">
+  <main class="min-h-[100vh]">
+    <Button id='darkModeToggle' variant="secondary">Toggle Mode</Button>
+
   </main>
 </MainLayout>
