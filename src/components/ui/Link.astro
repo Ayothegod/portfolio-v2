@@ -1,0 +1,27 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  text: string | boolean;
+  href: string;
+  styles: string;
+  icon?: string;
+  iconPosition?: "right" | "left";
+}
+
+const { text, href, icon, styles, iconPosition } = Astro.props as Props;
+---
+
+<!-- { "bg-gray-200 text-sm font-bold rounded p-2": !isButton, "underline text-sm font-bold p-2": isButton }, -->
+<a
+  href={href}
+  class:list={[
+    "underline text-sm font-bold border text-black flex items-center gap-1 p-2 w-max",
+    styles,
+  ]}
+>
+  {icon && iconPosition === "left" && <Icon name={icon} />}
+  <!-- {isTextOnly && text} -->
+  <span>{text}</span>
+  {icon && iconPosition === "right" && <Icon name={icon} />}
+</a>

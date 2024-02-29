@@ -1,13 +1,17 @@
 ---
 import { Icon } from 'astro-icon/components'
-import { Button } from "../ui/button";
+import Link from '../ui/Link.astro';
 ---
 
 <header class="flex justify-center">
-  <div class="fixed inset-x-0 top-0 max-w-full mt-3 mx-4 bg-white">
+  <div class="fixed inset-x-0 top-0 max-w-full mt-3 mx-4 bg-white p-20">
     <div>
       <Icon name="Lock" />
-      <!-- <Button variant="destructive" id="darkModeToggle">enter dark mode</Button> -->
+      <Icon name="icons/Github" />
+      <Icon name="icons/LinkedIn" />
+
+      <Link href='/' styles='' text="Homepage" icon='icons/LinkedIn' iconPosition='left'/>
+
     </div>
   </div>
 </header>
