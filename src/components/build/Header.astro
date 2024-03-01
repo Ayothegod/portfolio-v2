@@ -1,0 +1,64 @@
+---
+import { desktopNav } from "@/lib/mobileMenu";
+import Link from "../ui/Link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<header class="max-w-[1024px] mx-auto text-[#4B4B4B] dark:text-[#F2F2F2] mt-10">
+  <div
+    class="rounded-2xl w-full mx-4 p-3 bg-[rgba(0,0,0,.1)] dark:bg-[rgba(0,0,0,.4)] border border-gray-100 backdrop-blur-lg flex items-center justify-between"
+  >
+    <div class="flex items-center gap-10">
+      <h1 class="text-2xl font-bold font-mono">Aiiomide</h1>
+      <ul class="flex items-center gap-10">
+        {
+          desktopNav.slice(0, 3).map((nav) => (
+            <a href={nav.href} class="hover:text-black transition-all">
+              <li>{nav.name}</li>
+            </a>
+          ))
+        }
+
+        <!-- <div class="relative">
+          <li id="hoverButton" class="cursor-pointer hover:text-black">More</li>
+          <div id="hoverBox" class="hidden bg-black h-20 w-20 rounded-lg absolute top-4"></div>
+        </div> -->
+      </ul>
+    </div>
+
+    <div class="text-2xl flex items-center gap-8 ">
+        <div class="flex items-center gap-8">
+            <Icon name="icons/LinkedIn" class="cursor-pointer transition-all hover:rotate-3"/>
+            <Icon name="icons/Github" class="cursor-pointer transition-all hover:rotate-3"/>
+            <Icon name="icons/X" class="cursor-pointer transition-all hover:rotate-3"/>
+
+        </div>
+        <div class="border-l border-gray-300 pl-4">
+            <Icon name="icons/Sun" class="cursor-pointer transition duration-500 ease-in-out hover:rotate-12"/>
+        </div>
+    </div>
+  </div>
+</header>
+
+<script>
+    // let hoverBox = document.getElementById("hoverBox")
+    // let hoverButton = document.getElementById("hoverButton")
+    // hoverButton?.addEventListener("mouseover", () => {
+    //     hoverBox?.classList.remove("hidden")
+    // })
+    // hoverButton?.addEventListener("mouseleave", () => {
+    //     hoverBox?.classList.add("hidden")
+    // })
+    // hoverButton?.addEventListener("click", (e) => {
+    //     if(hoverBox?.classList.contains("hidden")){
+    //         hoverBox?.classList.remove("hidden")
+    //     } else {
+    //         hoverBox?.classList.add("hidden")
+            
+    //     }
+    // })
+    // hoverBox?.addEventListener("hover", (e) => {
+    //     e.stopPropagation()
+
+    // })
+</script>

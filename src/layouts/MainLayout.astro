@@ -2,6 +2,7 @@
 import "@/styles/globals.css";
 import HeadLayout from "./HeadLayout.astro";
 import Menu from "../components/build/Menu.astro";
+import Header from "../components/build/Header.astro"
 
 interface Props {
   title: string;
@@ -12,7 +13,8 @@ const { title, description } = Astro.props;
 
 <html lang="en" class="">
   <HeadLayout title={title} description={description} />
-  <body>
+  <body class="font-inter">
+    <Header/>
     <Menu />
     <slot />
   </body>

@@ -4,6 +4,16 @@ interface Icon {
   activeIcon?: string;
 }
 
+interface DesktopIcon {
+  href: string;
+  icon: string
+}
+
+interface Nav {
+  href: string;
+  name: string
+}
+
 export const mobileMenuIcons: Icon[] = [
   {
     href: "/",
@@ -30,9 +40,37 @@ export const mobileMenuIcons: Icon[] = [
     icon: "icons/Message - Outline",
     activeIcon: "icons/Message - Fill",
   },
-  // {
-  //   href: "",
-  //   icon: "icons/More - Outline",
-  //   activeIcon: "icons/More - Fill",
-  // },
 ];
+
+export const desktopNav: Nav[] = [
+  {
+    href: "/about",
+    name:"About"
+  },
+  {
+    href: "/work",
+    name:"Work"
+  },
+  {
+    href: "/notebook",
+    name:"Notebook"
+  },
+  {
+    href: "/contact",
+    name:"Contact"
+  },
+  {
+    href: "/stack",
+    name:"Tech Stack"
+  },
+  {
+    href: "/bookshelf",
+    name:"Bookshelf"
+  }
+]
+
+export const desktopIcon: DesktopIcon[] = [
+  {
+    
+  }
+]
