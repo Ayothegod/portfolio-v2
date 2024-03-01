@@ -71,6 +71,15 @@ export const desktopNav: Nav[] = [
 
 export const desktopIcon: DesktopIcon[] = [
   {
-    
+    href: "/aiiomide/linkedin",
+    icon:"icons/LinkedIn",
+  },
+  {
+    href: "https://github.com/ayothegod",
+    icon:"icons/Github",
+  },
+  {
+    href: "http://x.com/aiiomide",
+    icon:"icons/X",
   }
 ]
