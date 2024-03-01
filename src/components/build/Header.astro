@@ -9,12 +9,12 @@ import { Icon } from "astro-icon/components";
     class="rounded-2xl w-full mx- p-3 bg-[rgba(0,0,0,.1)] dark:bg-[rgba(0,0,0,.4)] border border-gray-100 backdrop-blur-lg flex items-center justify-between "
   >
     <div class="flex items-center gap-10">
-      <h1 class="text-2xl font-bold font-mono">Aiiomide</h1>
-      <ul class="flex items-center gap-10">
+      <h1 class="text-2xl font-bold font-mono cursor-pointer" id="darkModeToggle">Aiiomide</h1>
+      <ul class="flex items-center gap-6 md:gap-10">
         {
           desktopNav.slice(0, 3).map((nav) => (
             <a href={nav.href} class="hover:text-black transition-all">
-              <li>{nav.name}</li>
+              <li >{nav.name}</li>
             </a>
           ))
         }
@@ -29,11 +29,35 @@ import { Icon } from "astro-icon/components";
 
         </div>
         <div class="border-l border-gray-300">
-            <Icon name="icons/Sun" class="cursor-pointer transition duration-500 ease-in-out hover:rotate-12"/>
+            <Icon name="icons/Sun" class="cursor-pointer transition duration-500 ease-in-out hover:rotate-12" id="darkModeToggle"/>
         </div>
     </div>
   </div>
 </header>
 
 <script>
+      import {
+    $toggleTheme,
+    $applyTheme,
+    $currentTheme,
+    $setThemePreference,
+  } from "../../store/theme";
+
+  const themeToggleButton = document.getElementById("darkModeToggle");
+  const html = document.querySelector("html");
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const currentTheme = $currentTheme.get();
+
+    if (currentTheme === null) {
+      $setThemePreference("dark");
+    }
+    $applyTheme();
+  });
+
+  if (themeToggleButton) {
+    themeToggleButton.addEventListener("click", () => {
+      $toggleTheme();
+    });
+  }
 </script>
