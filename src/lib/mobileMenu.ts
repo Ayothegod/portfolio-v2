@@ -1,17 +1,17 @@
 interface Icon {
   href: string;
-  icon: string
+  icon: string;
   activeIcon?: string;
 }
 
 interface DesktopIcon {
   href: string;
-  icon: string
+  icon: string;
 }
 
 interface Nav {
   href: string;
-  name: string
+  name: string;
 }
 
 export const mobileMenuIcons: Icon[] = [
@@ -45,41 +45,41 @@ export const mobileMenuIcons: Icon[] = [
 export const desktopNav: Nav[] = [
   {
     href: "/about",
-    name:"About"
+    name: "About",
   },
   {
     href: "/work",
-    name:"Work"
+    name: "Work",
   },
   {
     href: "/notebook",
-    name:"Notebook"
+    name: "Notebook",
   },
   {
     href: "/contact",
-    name:"Contact"
+    name: "Contact",
   },
   {
     href: "/stack",
-    name:"Tech Stack"
+    name: "Tech Stack",
   },
   {
     href: "/bookshelf",
-    name:"Bookshelf"
-  }
-]
+    name: "Bookshelf",
+  },
+];
 
 export const desktopIcon: DesktopIcon[] = [
   {
     href: "/aiiomide/linkedin",
-    icon:"icons/LinkedIn",
+    icon: "icons/LinkedIn",
   },
   {
     href: "https://github.com/ayothegod",
-    icon:"icons/Github",
+    icon: "icons/Github",
   },
   {
     href: "http://x.com/aiiomide",
-    icon:"icons/X",
-  }
-]
+    icon: "icons/X",
+  },
+];

@@ -1,12 +1,13 @@
 ---
-import { desktopNav } from "@/lib/mobileMenu";
-import Link from "../ui/Link.astro";
+import { desktopIcon, desktopNav } from "@/lib/mobileMenu";
 import { Icon } from "astro-icon/components";
 ---
 
-<header class="hidden sm:block max-w-[1024px] mx-auto text-[#4B4B4B] dark:text-[#F2F2F2] mt-10 sm:px-8 md:px-4 lg:px-0">
+<header
+  class="hidden sm:block max-w-[1024px] mx-auto text-[#4B4B4B] dark:text-[#F2F2F2] mt-10 sm:px-8 md:px-4 lg:px-0"
+>
   <div
-    class="rounded-2xl w-full mx- p-3 bg-[rgba(0,0,0,.1)] dark:bg-[rgba(0,0,0,.4)] backdrop-blur-lg flex items-center justify-between "
+    class="rounded-2xl w-full mx- p-3 bg-[rgba(0,0,0,.1)] dark:bg-[rgba(0,0,0,.4)] backdrop-blur-lg flex items-center justify-between"
   >
     <div class="flex items-center gap-10">
       <h1 class="text-2xl font-bold font-mono cursor-pointer">Aiiomide</h1>
@@ -14,34 +15,44 @@ import { Icon } from "astro-icon/components";
         {
           desktopNav.slice(0, 3).map((nav) => (
             <a href={nav.href} class="hover:text-black transition-all">
-              <li >{nav.name}</li>
+              <li>{nav.name}</li>
             </a>
           ))
         }
       </ul>
     </div>
 
-    <div class="text-2xl flex items-center gap-8 ">
-        <div class="hidden md:flex items-center gap-8">
-            <Icon name="icons/LinkedIn" class="cursor-pointer transition-all hover:rotate-3"/>
-            <Icon name="icons/Github" class="cursor-pointer transition-all hover:rotate-3"/>
-            <Icon name="icons/X" class="cursor-pointer transition-all hover:rotate-3"/>
-
-        </div>
-        <div class="border-l border-gray-300 dark:border-none pl-4">
-            <Icon name="icons/Sun" class="cursor-pointer transition duration-500 ease-in-out hover:rotate-12" id="toggleDarkMode"/>
-        </div>
+    <div class="text-2xl flex items-center gap-8">
+      <div class="hidden md:flex items-center gap-8">
+        {
+          desktopIcon.map((icon) => (
+            <a href={icon.href}>
+              <Icon
+                name={icon.icon}
+                class="cursor-pointer transition-all hover:rotate-3 hover:text-black dark:hover:text-white"
+              />
+            </a>
+          ))
+        }
+      </div>
+      <div class="border-l border-gray-300 dark:border-none pl-4">
+        <Icon
+          name="icons/Sun"
+          class="cursor-pointer transition duration-500 ease-in-out hover:rotate-12"
+          id="toggleDarkMode"
+        />
+      </div>
     </div>
   </div>
 </header>
 
 <script>
-      import {
+  import {
     $toggleTheme,
     $applyTheme,
     $currentTheme,
     $setThemePreference,
-  } from "../../store/theme"
+  } from "../../store/theme";
 
   const themeToggleButton = document.getElementById("toggleDarkMode");
   const html = document.querySelector("html");

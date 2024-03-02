@@ -23,12 +23,12 @@ const currentUrl = Astro.url?.pathname;
             icon={currentUrl === menu.href ? menu.activeIcon : menu.icon}
             iconPosition="left"
           />
-          ))
-        }
-        <Button id="darkModeToggle" variant="ghost">
-          <!-- TODO: make a menu that opens when i click on this button, and make the icon change too -->
-          <Icon name="icons/More - Outline" class="text-2xl"/>
-        </Button>
+        ))
+      }
+      <Button id="darkModeToggle" variant="ghost">
+        <!-- TODO: make a menu that opens when i click on this button, and make the icon change too -->
+        <Icon name="icons/More - Outline" class="text-2xl" />
+      </Button>
     </div>
   </div>
 </header>
