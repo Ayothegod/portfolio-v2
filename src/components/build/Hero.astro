@@ -1,0 +1,30 @@
+---
+import { Button } from "../ui/button";
+---
+
+<section class="mt-20 md:max-w-[70%]">
+  <h1 class="text-5xl md:text-7xl font-extrabold">
+    I'm <span class="text-dark dark:text-light block">Ayomide Adebisi</span>
+  </h1>
+  <p class="mt-4 leading-7">
+    About Work Notebook Contact I'm Eihab Khan A multidisciplinary front-end
+    engineer and UI/UX designer helping startups turn their ideas into a digital
+    reality. I specialize in designing and building modern mobile and web
+    applications.
+  </p>
+
+  <div class="mt-8 space-y-4 md:space-x-4 md:space-y-0">
+    <!-- TODO: build an astro button component, make sure to build a great astro button please -->
+    <Button
+      className="w-full py-6 md:px-8 md:py-8 md:w-max hover:bg-dark-hover dark:bg-dark-secondary dark:text-light dark:hover:bg-dark-hover"
+    >
+      See my resume
+    </Button>
+    <Button
+      variant="secondary"
+      className="w-full py-6 md:px-8 md:py-8 md:w-max hover:bg-light-hover"
+    >
+      Get in touch
+    </Button>
+  </div>
+</section>
