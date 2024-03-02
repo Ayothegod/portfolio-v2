@@ -6,10 +6,10 @@ import { Icon } from "astro-icon/components";
 
 <header class="hidden sm:block max-w-[1024px] mx-auto text-[#4B4B4B] dark:text-[#F2F2F2] mt-10 sm:px-8 md:px-4 lg:px-0">
   <div
-    class="rounded-2xl w-full mx- p-3 bg-[rgba(0,0,0,.1)] dark:bg-[rgba(0,0,0,.4)] border border-gray-100 backdrop-blur-lg flex items-center justify-between "
+    class="rounded-2xl w-full mx- p-3 bg-[rgba(0,0,0,.1)] dark:bg-[rgba(0,0,0,.4)] backdrop-blur-lg flex items-center justify-between "
   >
     <div class="flex items-center gap-10">
-      <h1 class="text-2xl font-bold font-mono cursor-pointer" id="darkModeToggle">Aiiomide</h1>
+      <h1 class="text-2xl font-bold font-mono cursor-pointer">Aiiomide</h1>
       <ul class="flex items-center gap-6 md:gap-10">
         {
           desktopNav.slice(0, 3).map((nav) => (
@@ -28,8 +28,8 @@ import { Icon } from "astro-icon/components";
             <Icon name="icons/X" class="cursor-pointer transition-all hover:rotate-3"/>
 
         </div>
-        <div class="border-l border-gray-300">
-            <Icon name="icons/Sun" class="cursor-pointer transition duration-500 ease-in-out hover:rotate-12" id="darkModeToggle"/>
+        <div class="border-l border-gray-300 dark:border-none pl-4">
+            <Icon name="icons/Sun" class="cursor-pointer transition duration-500 ease-in-out hover:rotate-12" id="toggleDarkMode"/>
         </div>
     </div>
   </div>
@@ -41,9 +41,9 @@ import { Icon } from "astro-icon/components";
     $applyTheme,
     $currentTheme,
     $setThemePreference,
-  } from "../../store/theme";
+  } from "../../store/theme"
 
-  const themeToggleButton = document.getElementById("darkModeToggle");
+  const themeToggleButton = document.getElementById("toggleDarkMode");
   const html = document.querySelector("html");
 
   window.addEventListener("DOMContentLoaded", () => {
@@ -58,6 +58,7 @@ import { Icon } from "astro-icon/components";
   if (themeToggleButton) {
     themeToggleButton.addEventListener("click", () => {
       $toggleTheme();
+      console.log("checked");
     });
   }
 </script>
