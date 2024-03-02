@@ -83,3 +83,14 @@ export const desktopIcon: DesktopIcon[] = [
     icon: "icons/X",
   },
 ];
+
+export const mockProjects = [
+  {
+    icon: "",
+    image: "",
+    title:"Subbi –– The free subscriptions manager",
+    description:"Subbi is a side project that I’ve built to help me keep track of how much I spend on subscriptions and also to prevent the “accidental” bill after a 14-day trail ends. It helps you keep track of bills like Netflix, Spotify, Xbox Game Pass, Bus Card, Bank Cards, and many more.",
+    link:"http://ayomide.me",
+    github:"http://ayomide.me"
+  }
+]
