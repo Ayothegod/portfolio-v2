@@ -4,17 +4,17 @@ import { Icon } from "astro-icon/components";
 ---
 
 <header
-  class="hidden sm:block max-w-[1024px] mx-auto mt-8 sm:px-8 md:px-4 text-[#4B4B4B] dark:text-[#F2F2F2] "
+  class="hidden sm:block max-w-[1024px] mx-auto mt-8 sm:px-8 md:px-4"
 >
   <div
-    class="rounded-2xl w-full mx- p-3 bg-[rgba(0,0,0,.1)] dark:bg-[rgba(0,0,0,.4)] backdrop-blur-lg flex items-center justify-between"
+    class="rounded-2xl w-full mx- p-3 bg-header dark:bg-header-dark backdrop-blur-lg flex items-center justify-between"
   >
     <div class="flex items-center gap-10">
-      <h1 class="text-2xl font-bold font-mono cursor-pointer">Aiiomide</h1>
+      <h1 class="text-2xl font-bold font-mono cursor-pointer text-black dark:text-white">Aiiomide</h1>
       <ul class="flex items-center gap-6 md:gap-10">
         {
           desktopNav.slice(0, 3).map((nav) => (
-            <a href={nav.href} class="hover:text-black transition-all">
+            <a href={nav.href} class="hover:text-black dark:hover:text-white transition-all">
               <li>{nav.name}</li>
             </a>
           ))

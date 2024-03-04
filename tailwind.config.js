@@ -16,12 +16,16 @@ module.exports = {
         inter: ["Inter", "sans-serif"],
       },
       colors: {
+        "light-text":"#4B4B4B",
+        "dark-text":"#808080",
         dark: "#0D0D0D",
         light: "#fbfbfb",
         "dark-secondary": "#181818",
         "light-secondary": "#F6F6F6",
         "dark-hover": "#242424",
         "light-hover": "#E5E5E5",
+        header:"rgba(0,0,0,.1)",
+        "header-dark":"rgba(0,0,0,.4)"
       },
       keyframes: {
         "accordion-down": {
