@@ -1,14 +1,14 @@
 ---
 import { Icon } from "astro-icon/components";
 import Link from "../ui/Link.astro";
-import { Button } from "../ui/button";
+// import { Button } from "../ui/button";
 import { mobileMenuIcons } from "../../lib/mobileMenu";
 
 const currentUrl = Astro.url?.pathname;
 ---
 
-<header class="hidden mflex justify-center">
-  <Button id="darkModeToggle" variant="secondary">Toggle Mode</Button>
+<header class="sm:hidden flex justify-center">
+  <!-- <Button id="darkModeToggle" variant="secondary">Toggle Mode</Button> -->
   <!-- TODO: make sure to refactor the color used, that is rgba styles to match everything both in link too -->
   <div
     class="fixed inset-x-0 bottom-6 rounded-2xl max-w-full mx-4 p-3 bg-[rgba(0,0,0,.1)] dark:bg-[rgba(0,0,0,.4)] backdrop-blur-lg"
@@ -25,10 +25,10 @@ const currentUrl = Astro.url?.pathname;
           />
         ))
       }
-      <Button id="darkModeToggle" variant="ghost">
         <!-- TODO: make a menu that opens when i click on this button, and make the icon change too -->
+      <!-- <Button id="darkModeToggle" variant="ghost">
         <Icon name="icons/More - Outline" class="text-2xl" />
-      </Button>
+      </Button> -->
     </div>
   </div>
 </header>
