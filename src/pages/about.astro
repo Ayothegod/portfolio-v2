@@ -9,14 +9,36 @@ import MainLayout from "../layouts/MainLayout.astro";
   <main class="min-h-[100vh]">
     <div>
       <p>Time to test the styles</p>
-
-      <div class="mt-4 grid grid-cols-2 p-4 gap-2">
-        <button class="text-sm p-4 rounded-md bg-neutral-900">Neutral</button>
-        <button class="text-sm p-4 rounded-md bg-gray-900">gray</button>
-        <button class="text-sm p-4 rounded-md bg-slate-900">slate</button>
-        <button class="text-sm p-4 rounded-md bg-zinc-900">zinc</button>
-        <button class="text-sm p-4 rounded-md bg-stone-900">stone</button>
-      </div>
     </div>
   </main>
 </MainLayout>
+
+<!-- /** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: "class",
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  prefix: "",
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      fontFamily:{
+        "inter": ['Inter', 'sans-serif'],
+      },
+      colors: {
+        dark:"#0D0D0D",
+        light:"#fbfbfb",
+        "dark-secondary":"#181818",
+        "light-secondary":"#F6F6F6",
+        "dark-hover":"#242424",
+        "light-hover":"#E5E5E5",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+} -->
