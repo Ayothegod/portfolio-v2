@@ -1,11 +1,13 @@
 ---
+import { Button } from "../ui/button";
+
 ---
 
-<section class="mt-20 md:max-w-[70%]">
+<section class="mt-20 lg:max-w-[70%]">
   <h1 class="text-5xl md:text-7xl font-extrabold">
     I'm <span class="text-dark dark:text-light block">Ayomide Adebisi</span>
   </h1>
-  <p class="mt-4 leading-7">
+  <p class="mt-4 leading-7 sm:text-xl">
     About Work Notebook Contact I'm Eihab Khan A multidisciplinary front-end
     engineer and UI/UX designer helping startups turn their ideas into a digital
     reality. I specialize in designing and building modern mobile and web
@@ -13,18 +15,16 @@
   </p>
 
   <div class="mt-8 space-y-4 md:space-x-4 md:space-y-0">
-    <!-- TODO: build an astro button component, make sure to build a great astro button please, -->
-    <!-- NOTE:No longer building a button, i just have to configure the css variable colors and evrything will work -->
-    <!-- <Button
-      className="w-full py-6 md:px-8 md:py-8 md:w-max hover:bg-dark-hover dark:bg-dark-secondary dark:text-light dark:hover:bg-dark-hover"
+    <Button
+      className="w-full text-base py-6 md:px-8 md:py-8 md:w-max"
     >
       See my resume
     </Button>
     <Button
       variant="secondary"
-      className="w-full py-6 md:px-8 md:py-8 md:w-max hover:bg-light-hover"
+      className="w-full py-6 text-base md:px-8 md:py-8 md:w-max hover:bg-neutral-200"
     >
       Get in touch
-    </Button> -->
+    </Button>
   </div>
 </section>
