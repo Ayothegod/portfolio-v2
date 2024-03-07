@@ -9,7 +9,7 @@ const currentUrl = Astro.url?.pathname;
 
 <header class="sm:hidden flex justify-center">
   <div
-    class="fixed inset-x-0 bottom-6 rounded-xl max-w-full mx-4 p-3 bg-header dark:bg-header-dark backdrop-blur-lg"
+    class="fixed inset-x-0 bottom-6 rounded-md max-w-full mx-4 p-3 bg-header dark:bg-header-dark backdrop-blur-lg"
   >
     <div class="grid grid-cols-6 gap-4 items-center">
       {
@@ -17,7 +17,7 @@ const currentUrl = Astro.url?.pathname;
           <Link
             href={menu.href}
             text={false}
-            styles={`p-2 rounded-lg text-2xl hover:bg-neutral-300 dark:hover:bg-neutral-900 ${currentUrl === menu.href && "bg-neutral-300 dark:bg-neutral-900"}`}
+            styles={`p-2 rounded-md text-2xl hover:bg-neutral-300 dark:hover:bg-neutral-900 ${currentUrl === menu.href && "bg-neutral-300 dark:bg-neutral-900"}`}
             icon={currentUrl === menu.href ? menu.activeIcon : menu.icon}
             iconPosition="left"
           />

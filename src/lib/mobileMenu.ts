@@ -126,3 +126,41 @@ export const mockProjects: Project[] = [
     github: "https://github.com/ayothegod",
   },
 ];
+interface KnowMe {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+  link: string;
+}
+
+export const knowMe: KnowMe[] = [
+  {
+    id: 1,
+    image: "src/assets/tech/My project 2.png",
+    title: "About me",
+    description: "Who i am and what i do",
+    link: "http://ayomide.me",
+  },
+  {
+    id: 2,
+    image: "src/assets/tech/Tech Stack.png",
+    title: "Tech Stack",
+    description: "The dev tools and apps i use",
+    link: "http://ayomide.me",
+  },
+  {
+    id: 3,
+    image: "src/assets/tech/geist.png",
+    title: "Notebook",
+    description: "My thoughts, insights, and reflections",
+    link: "http://ayomide.me",
+  },
+  {
+    id: 4,
+    image: "src/assets/tech/Bookshelf.png",
+    title: "Bookshelf",
+    description: "Books and pieces of wisdom i've enjoyed reading",
+    link: "http://ayomide.me",
+  },
+];

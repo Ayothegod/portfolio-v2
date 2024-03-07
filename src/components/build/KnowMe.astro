@@ -1,0 +1,29 @@
+---
+import { knowMe } from "@/lib/mobileMenu";
+---
+
+<section class="mt-20 md:mt-32 lg:mt-40">
+  <h2 class="text-3xl md:text-5xl font-bold text-dark dark:text-light">
+    Get to know me
+  </h2>
+  <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+    {
+      knowMe.map((item) => (
+        <div class="bg-light-secondary dark:bg-dark-secondary rounded-md flex flex-col items-center gap-2 p-8">
+          <h2 class="font-extrabold text-black dark:text-white text-2xl md:text-3xl">
+            {item.title}
+          </h2>
+          <p class="leading-6">{item.description}</p>
+
+          <div class="flex overflow-hidden">
+            <img
+              src={item.image}
+              alt=""
+              class=" transition-transform duration-300 ease-in-out hover:-rotate-6 hover:scale-110"
+            />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
