@@ -1,9 +1,7 @@
 ---
 import { footerLinks, footerSocials } from "@/lib/mobileMenu";
-
+import { Icon } from "astro-icon/components";
 const date = new Date().getFullYear()
-// console.log(date);
-
 ---
 
 <footer
@@ -17,7 +15,7 @@ const date = new Date().getFullYear()
       <ul class="mt-4 flex flex-col gap-4">
         {
           footerLinks.map((link) => (
-            <a href={link.href}>
+            <a href={link.href} class="hover:text-light">
               <li>{link.title}</li>
             </a>
           ))
@@ -32,8 +30,10 @@ const date = new Date().getFullYear()
       <ul class="mt-4 flex flex-col gap-4">
         {
           footerSocials.map((link) => (
-            <a href={link.href}>
+            <a href={link.href} class="hover:text-dark-secondary dark:hover:text-light flex items-center gap-2">
               <li>{link.title}</li>
+
+                <Icon name="icons/Arrow Right" class:list="hidden hover:flex hover:-rotate-45"/>
             </a>
           ))
         }
