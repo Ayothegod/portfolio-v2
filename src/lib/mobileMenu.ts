@@ -164,3 +164,49 @@ export const knowMe: KnowMe[] = [
     link: "http://ayomide.me",
   },
 ];
+
+interface FooterLink {
+  title: string;
+  href: string;
+}
+
+export const footerLinks: FooterLink[] = [
+  {
+    title: "About",
+    href: "/about",
+  },
+  {
+    title: "Work",
+    href: "/work",
+  },
+  {
+    title: "Tech Stack",
+    href: "/stack",
+  },
+  {
+    title: "Bookshelf",
+    href: "/bookshelf",
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+  },
+];
+export const footerSocials: FooterLink[] = [
+  {
+    title: "Github",
+    href: "https://github.com/ayothegod",
+  },
+  {
+    title: "X (Twitter)",
+    href: "https://x.com/aiiomide",
+  },
+  {
+    title: "Discord",
+    href: "https://discord.gg/aiiomide",
+  },
+  {
+    title: "Whatsapp",
+    href: "/whatsapp",
+  },
+];

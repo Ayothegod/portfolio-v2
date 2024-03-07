@@ -1,7 +1,53 @@
 ---
+import { footerLinks, footerSocials } from "@/lib/mobileMenu";
+
+const date = new Date().getFullYear()
+// console.log(date);
 
 ---
 
-<footer>
-    This is the footer
+<footer
+  class="border-t dark:border-t-dark-hover px-4 md:px-10 lg:px-20 pt-20 pb-28 sm:pb-20 md:py-10 flex flex-col md:flex-row-reverse md:justify-between gap-20"
+>
+  <div class="flex flex-col gap-8 md:flex-row md:gap-14 lg:gap-24">
+    <div>
+      <h2 class="font-extrabold text-black dark:text-white text-xl">
+        Links
+      </h2>
+      <ul class="mt-4 flex flex-col gap-4">
+        {
+          footerLinks.map((link) => (
+            <a href={link.href}>
+              <li>{link.title}</li>
+            </a>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="font-extrabold text-black dark:text-white text-xl">
+        Elsewhere
+      </h2>
+      <ul class="mt-4 flex flex-col gap-4">
+        {
+          footerSocials.map((link) => (
+            <a href={link.href}>
+              <li>{link.title}</li>
+            </a>
+          ))
+        }
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="flex flex-col gap-4">
+    <h1 class="text-5xl font-bold font-mono cursor-pointer text-black dark:text-white">Aiiomide</h1>
+    <p class="">Thanks for stopping by</p>
+
+    <div class="mt-8 md:mt-auto">
+        <p>{new Date().getFullYear()} Ayomide Adebisi.</p>
+    </div>
+  </div>
 </footer>
