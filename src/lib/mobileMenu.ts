@@ -24,6 +24,14 @@ interface Project {
   github: string;
 }
 
+interface KnowMe {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+  link: string;
+}
+
 interface FooterLink {
   title: string;
   href: string;
@@ -130,13 +138,6 @@ export const mockProjects: Project[] = [
     github: "https://github.com/ayothegod",
   },
 ];
-interface KnowMe {
-  id: number;
-  image: string;
-  title: string;
-  description: string;
-  link: string;
-}
 
 export const knowMe: KnowMe[] = [
   {
