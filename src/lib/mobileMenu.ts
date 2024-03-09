@@ -24,6 +24,10 @@ interface Project {
   github: string;
 }
 
+interface FooterLink {
+  title: string;
+  href: string;
+}
 export const mobileMenuIcons: Icon[] = [
   {
     href: "/",
@@ -165,10 +169,6 @@ export const knowMe: KnowMe[] = [
   },
 ];
 
-interface FooterLink {
-  title: string;
-  href: string;
-}
 
 export const footerLinks: FooterLink[] = [
   {
