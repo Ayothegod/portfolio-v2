@@ -111,9 +111,9 @@ export const mockProjects: Project[] = [
     id: 1,
     icon: "icons/Behance",
     image: "src/assets/tech/subbi.png",
-    title: "Subbi –– The free subscriptions manager",
+    title: "Subbi",
     description:
-      "Subbi is a side project that I’ve built to help me keep track of how much I spend on subscriptions and also to prevent the “accidental” bill after a 14-day trail ends. It helps you keep track of bills like Netflix, Spotify, Xbox Game Pass, Bus Card, Bank Cards, and many more.",
+      "Subbi is a side project that I’ve built to help me keep track of how much I spend on subscriptions and also to prevent the “accidental” bill after a 14-day trail ends.",
     link: "http://ayomide.me",
     github: "https://github.com/ayothegod",
   },
@@ -149,7 +149,7 @@ export const knowMe: KnowMe[] = [
   },
   {
     id: 2,
-    image: "src/assets/tech/Tech Stack.png",
+    image: "src/assets/tech/Subbi.png",
     title: "Tech Stack",
     description: "The dev tools and apps i use",
     link: "http://ayomide.me",
@@ -159,13 +159,6 @@ export const knowMe: KnowMe[] = [
     image: "src/assets/tech/geist.png",
     title: "Notebook",
     description: "My thoughts, insights, and reflections",
-    link: "http://ayomide.me",
-  },
-  {
-    id: 4,
-    image: "src/assets/tech/Bookshelf.png",
-    title: "Bookshelf",
-    description: "Books and pieces of wisdom i've enjoyed reading",
     link: "http://ayomide.me",
   },
 ];

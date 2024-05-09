@@ -15,11 +15,11 @@ import { knowMe } from "@/lib/mobileMenu";
           </h2>
           <p class="leading-6">{item.description}</p>
 
-          <div class="flex overflow-hidden">
+          <div class="flex overflow-hidden h-48 w-full">
             <img
               src={item.image}
               alt=""
-              class=" transition-transform duration-300 ease-in-out hover:-rotate-6 hover:scale-110"
+              class="w-full h-44 object-contain transition-transform duration-300 ease-in-out hover:-rotate-6 hover:scale-110"
             />
           </div>
         </div>
@@ -27,3 +27,5 @@ import { knowMe } from "@/lib/mobileMenu";
     }
   </div>
 </section>
+
+<!-- if i use flex wrap, how do i make the wrapped item go to the center -->
