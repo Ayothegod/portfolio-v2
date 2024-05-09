@@ -9,3 +9,7 @@
 
 - work on the project group hover
 - correct the grid for knowme
+- error handling
+- update meta title and desc for allpages
+- make the mandatory box style singular
+- also the styles of text and other things that look alike
