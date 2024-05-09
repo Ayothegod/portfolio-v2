@@ -8,7 +8,7 @@
 
 
 - work on the project group hover
-- correct the grid for knowme
+<!-- - correct the grid for knowme -->
 - error handling
 - update meta title and desc for allpages
 - make the mandatory box style singular
