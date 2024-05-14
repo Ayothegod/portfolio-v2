@@ -1,0 +1,31 @@
+---
+import SectionTop from "@/components/build/build-ui/SectionTop.astro";
+import MobileLogo from "@/components/ui/MobileLogo";
+import MainLayout from "@/layouts/MainLayout.astro";
+
+const data: any = [];
+---
+
+<MainLayout
+  title="Adebisi Ayomide - Notebok"
+  description="Portfolio for all my full stack development works"
+>
+  <main class="mb-20 min-h-[40vh]">
+    <MobileLogo />
+
+    <SectionTop
+      title="Notebook"
+      description="My reflections and understanding."
+    />
+    <section class="max-w-[1024px] mx-auto px-4 py-6">
+      {
+        data.length < 1 
+        ? <p>No notes to display right now</p>
+        :
+        data.map((data: any, index: number) => (
+            <p>Data</p>
+        ))
+      }
+    </section>
+  </main>
+</MainLayout>

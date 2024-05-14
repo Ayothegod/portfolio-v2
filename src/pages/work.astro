@@ -1,0 +1,36 @@
+---
+import SectionTop from "@/components/build/build-ui/SectionTop.astro";
+import MobileLogo from "@/components/ui/MobileLogo";
+import MainLayout from "../layouts/MainLayout.astro";
+import Projects from "@/components/build/Projects.astro";
+import { Button } from "@/components/ui/button";
+---
+
+<MainLayout
+  title="Adebisi Ayomide - Contact"
+  description="Portfolio for all my full stack development works"
+>
+  <main class="mb-20 min-h-[40vh]">
+    <MobileLogo />
+
+    <SectionTop title="Work" description="Projects and ideas I've built." />
+
+    <section class="max-w-[1024px] mx-auto px-4 py-6 ">
+      <Projects />
+
+      <div
+        class="mt-8 p-4 md:p-6 border-2 border-dotted border-light-hover dark:border-dark-hover bg-transparent text-center space-y-6 rounded-md"
+      >
+        <h3 class="text-black dark:text-white">YOUR PROJECT HERE</h3>
+        <p>Let's turn your idea into a reality</p>
+        <div>
+          <a href="/contact">
+            <Button className="w-full md:w-fit md:px-8 md:py-6"
+              >Get in touch</Button
+            >
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</MainLayout>

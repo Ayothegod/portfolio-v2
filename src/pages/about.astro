@@ -1,14 +1,73 @@
 ---
+import MobileLogo from "@/components/ui/MobileLogo";
 import MainLayout from "../layouts/MainLayout.astro";
+import SectionTop from "@/components/build/build-ui/SectionTop.astro";
+import { Button } from "@/components/ui/button";
 ---
 
 <MainLayout
   title="Adebisi Ayomide - About"
   description="Portfolio for all my full stack development works"
 >
-  <main class="">
-    <div>
-      <p>About page</p>
-    </div>
+  <main class="mb-20 min-h-[40vh]">
+    <MobileLogo />
+
+    <SectionTop title="About me" description="This is who i am." />
+    <section class="max-w-[1024px] mx-auto px-4 py-6 space-y-8">
+      <!-- TODO: add my image over here -->
+
+      <div class="space-y-2">
+        <h2 class="font-bold">WHO I AM</h2>
+        <p>
+          I'm <span class="text-black dark:text-white font-medium"
+            >Ayomide Adebisi</span
+          >, a full-stack web developer based in Nigeria.
+        </p>
+        <p>
+          I build websites and web application while working with various
+          frontend libraries and packages to deliver user focused applications
+          and websites and also backend services and API's to deliver the best
+          of both worlds.
+        </p>
+      </div>
+
+      <div class="space-y-2">
+        <h2 class="font-bold">WHO I DO</h2>
+        <p>
+          currently i work with both the frontend (Reactjs/Nextjs/Remix) and the
+          backend stack (Nodejs/Expressjs) to deliver a full-stack experience.
+          I'm currently looking for extry and junior web developer positions.
+        </p>
+      </div>
+
+      <div>
+        Feel free to react out via <a
+          href="mailto:heyayomideadebisi@gmail.com?subject=Enquiry/Reachout"
+          class="text-black dark:text-white font-medium underline">e-mail</a
+        >, <a
+          href="https://twitter.com/aiiomide"
+          class="text-black dark:text-white font-medium underline">Twitter</a
+        > or my <a
+          href="https://github.com/ayothegod"
+          class="text-black dark:text-white font-medium underline">Github</a
+        >. Check out my <a
+          href="https://twitter.com/aiiomide"
+          class="text-black dark:text-white font-medium underline">Resume</a
+        >
+      </div>
+
+      <div class="">
+        <p>I will be expecting you, so let's build something great,</p>
+        <p class="text-4xl font-light mt-8">Aiiomide</p>
+      </div>
+
+      <div>
+        <a href="/contact">
+          <Button className="w-full md:w-fit md:px-8 md:py-6"
+            >Get in Touch</Button
+          >
+        </a>
+      </div>
+    </section>
   </main>
 </MainLayout>
