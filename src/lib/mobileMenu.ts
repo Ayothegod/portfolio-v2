@@ -84,7 +84,7 @@ export const desktopNav: Nav[] = [
   },
   {
     href: "/stack",
-    name: "Tech Stack",
+    name: "Stack",
   },
 ];
 
@@ -171,7 +171,7 @@ export const footerLinks: FooterLink[] = [
     href: "/work",
   },
   {
-    title: "Tech Stack",
+    title: "Stack",
     href: "/stack",
   },
   {

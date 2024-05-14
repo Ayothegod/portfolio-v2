@@ -3,18 +3,26 @@ import { desktopIcon, desktopNav } from "@/lib/mobileMenu";
 import { Icon } from "astro-icon/components";
 ---
 
-<header
-  class="hidden sm:block max-w-[1024px] mx-auto mt-8 px-4"
->
+<header class="hidden sm:block max-w-[1024px] mx-auto mt-8 px-4">
   <div
     class="rounded-md w-full mx- p-3 bg-header dark:bg-header-dark backdrop-blur-lg flex items-center justify-between"
   >
     <div class="flex items-center gap-10">
-      <h1 class="text-2xl font-bold font-mono cursor-pointer text-black dark:text-white">Aiiomide</h1>
-      <ul class="flex items-center gap-6 ">
+      <div
+        class="mr-4 flex items-center justify-center gap-2 font-extrabold cursor-pointer dark:hover:text-white"
+      >
+        <a href="/">
+          <Icon name="icons/Vector" class="text-2xl" />
+          <p>AIO</p>
+        </a>
+      </div>
+      <ul class="flex items-center gap-6">
         {
           desktopNav.map((nav) => (
-            <a href={nav.href} class="hover:text-black dark:hover:text-white transition-all">
+            <a
+              href={nav.href}
+              class="hover:text-black dark:hover:text-white transition-all"
+            >
               <li>{nav.name}</li>
             </a>
           ))
@@ -55,8 +63,8 @@ import { Icon } from "astro-icon/components";
     $currentTheme,
     $setThemePreference,
   } from "../../store/theme";
-  const currentTheme = localStorage.getItem("theme")
-console.log(currentTheme);
+  const currentTheme = localStorage.getItem("theme");
+  console.log(currentTheme);
   const themeToggleButton = document.getElementById("toggleDarkMode");
   const html = document.querySelector("html");
 

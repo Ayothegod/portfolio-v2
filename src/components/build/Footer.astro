@@ -1,17 +1,15 @@
 ---
 import { footerLinks, footerSocials } from "@/lib/mobileMenu";
 import { Icon } from "astro-icon/components";
-const date = new Date().getFullYear()
+const date = new Date().getFullYear();
 ---
 
 <footer
   class="border-t dark:border-t-dark-hover px-4 md:px-10 lg:px-20 pt-20 pb-28 sm:pb-20 md:py-10 flex flex-col md:flex-row-reverse md:justify-between gap-20"
 >
-  <div class="flex md:gap-14 lg:gap-24 ">
+  <div class="flex md:gap-14 lg:gap-24">
     <div class="flex-1">
-      <h2 class="font-extrabold text-black dark:text-white text-xl">
-        Links
-      </h2>
+      <h2 class="font-extrabold text-black dark:text-white text-xl">Links</h2>
       <ul class="mt-4 flex flex-col gap-4">
         {
           footerLinks.map((link) => (
@@ -30,24 +28,38 @@ const date = new Date().getFullYear()
       <ul class="mt-4 flex flex-col gap-4">
         {
           footerSocials.map((link) => (
-            <a href={link.href} target={link.target}  class="hover:text-dark-secondary dark:hover:text-light flex items-center gap-2">
+            <a
+              href={link.href}
+              target={link.target}
+              class="hover:text-dark-secondary dark:hover:text-light flex items-center gap-2"
+            >
               <li>{link.title}</li>
 
-                <Icon name="icons/Arrow Right" class:list="hidden hover:flex hover:-rotate-45"/>
+              <Icon
+                name="icons/Arrow Right"
+                class:list="hidden hover:flex hover:-rotate-45"
+              />
             </a>
           ))
         }
       </ul>
     </div>
-
   </div>
 
   <div class="flex flex-col gap-4">
-    <h1 class="text-5xl font-bold font-mono cursor-pointer text-black dark:text-white">Aiiomide</h1>
+    <a href="/">
+      <div
+        class="flex items-center gap-2 font-extrabold cursor-pointer dark:hover:text-white mt-6"
+      >
+        <Icon name="icons/Vector" class="text-4xl" />
+        <p>AIO</p>
+      </div>
+    </a>
+
     <p class="">Thanks for stopping by</p>
 
     <div class="mt-8 md:mt-auto">
-        <p>{new Date().getFullYear()} Ayomide Adebisi.</p>
+      <p>{new Date().getFullYear()} Ayomide Adebisi.</p>
     </div>
   </div>
 </footer>
