@@ -4,12 +4,12 @@ import MainLayout from "./MainLayout.astro";
 import SectionTop from "@/components/build/build-ui/SectionTop.astro";
 
 const { frontmatter } = Astro.props;
+console.log(frontmatter);
 ---
 
 <MainLayout title={frontmatter.title} description={frontmatter.description}>
   <main class="mb-20 min-h-[40vh]">
     <MobileLogo />
-
 
     <section class="max-w-[1024px] mx-auto px-4 py-6">
       <h1>{frontmatter.title}</h1>
@@ -17,7 +17,12 @@ const { frontmatter } = Astro.props;
       <slot />
     </section>
 
+    <!-- <h1>{frontmatter.title}</h1>
+    <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
+    <p><em>{frontmatter.description}</em></p>
+    <p>Written by: {frontmatter.author}</p>
+    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} /> -->
+
+    
   </main>
-  
-  </MainLayout
->
+</MainLayout>
