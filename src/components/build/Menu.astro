@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 import { mobileMenuIcons } from "../../lib/mobileMenu";
 import Link from "../ui/Link.astro";
 import { Button } from "../ui/button";
-
+import { MenuToggle } from "@/components/build/build-ui/MenuToggle";
 const currentUrl = Astro.url?.pathname;
 ---
 
@@ -23,10 +23,22 @@ const currentUrl = Astro.url?.pathname;
           />
         ))
       }
-        <!-- TODO: make a menu that opens when i click on this button, and make the icon change too -->
-      <Button id="darkModeToggle" variant="ghost">
+      <Button id="toggleButton" variant="ghost">
         <Icon name="icons/More - Outline" class="text-2xl" />
       </Button>
+
+      <!-- <Button id="darkModeToggle" variant="ghost">
+        <Icon name="icons/More - Outline" class="text-2xl" />
+      </Button> -->
+
+      <div
+        id="toggleDiv"
+        class="absolute h-48 -top-52 rounded-md right-0 left-0 p-3 bg-header dark:bg-header-dark"
+      >
+        <div class="bg-neutral-500 dark:bg-neutral-900">
+          Hello
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -56,4 +68,13 @@ const currentUrl = Astro.url?.pathname;
       $toggleTheme();
     });
   }
+
+  document.getElementById("toggleButton")?.addEventListener("click", () => {
+    let toggleDiv = document.getElementById("toggleDiv");
+    if (toggleDiv?.classList.contains("hidden")) {
+      toggleDiv.classList.remove("hidden");
+    } else {
+      toggleDiv?.classList.add("hidden");
+    }
+  });
 </script>
