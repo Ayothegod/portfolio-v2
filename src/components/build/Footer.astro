@@ -30,7 +30,7 @@ const date = new Date().getFullYear()
       <ul class="mt-4 flex flex-col gap-4">
         {
           footerSocials.map((link) => (
-            <a href={link.href} class="hover:text-dark-secondary dark:hover:text-light flex items-center gap-2">
+            <a href={link.href} target={link.target}  class="hover:text-dark-secondary dark:hover:text-light flex items-center gap-2">
               <li>{link.title}</li>
 
                 <Icon name="icons/Arrow Right" class:list="hidden hover:flex hover:-rotate-45"/>

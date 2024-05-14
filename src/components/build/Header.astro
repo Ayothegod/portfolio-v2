@@ -11,9 +11,9 @@ import { Icon } from "astro-icon/components";
   >
     <div class="flex items-center gap-10">
       <h1 class="text-2xl font-bold font-mono cursor-pointer text-black dark:text-white">Aiiomide</h1>
-      <ul class="flex items-center gap-6 md:gap-10">
+      <ul class="flex items-center gap-6 ">
         {
-          desktopNav.slice(0, 3).map((nav) => (
+          desktopNav.map((nav) => (
             <a href={nav.href} class="hover:text-black dark:hover:text-white transition-all">
               <li>{nav.name}</li>
             </a>

@@ -35,6 +35,7 @@ interface KnowMe {
 interface FooterLink {
   title: string;
   href: string;
+  target?: string
 }
 export const mobileMenuIcons: Icon[] = [
   {
@@ -85,15 +86,11 @@ export const desktopNav: Nav[] = [
     href: "/stack",
     name: "Tech Stack",
   },
-  {
-    href: "/bookshelf",
-    name: "Bookshelf",
-  },
 ];
 
 export const desktopIcon: DesktopIcon[] = [
   {
-    href: "/aiiomide/linkedin",
+    href: "https://linkedin.com/aiiomide",
     icon: "icons/LinkedIn",
   },
   {
@@ -101,7 +98,7 @@ export const desktopIcon: DesktopIcon[] = [
     icon: "icons/Github",
   },
   {
-    href: "http://x.com/aiiomide",
+    href: "https://twitter.com/aiiomide",
     icon: "icons/X",
   },
 ];
@@ -201,6 +198,7 @@ export const footerSocials: FooterLink[] = [
   },
   {
     title: "Whatsapp",
-    href: "/whatsapp",
+    href: "https://wa.me/08105537111?text=Hello",
+    target: "_blank"
   },
 ];

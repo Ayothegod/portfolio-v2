@@ -19,3 +19,5 @@
 - add my image to about me also update the meta tgas foa all pages
 
 - visit the headers again and update correctly and add that header and footer bg gradient
+
+- how to link whatsapp from my website
