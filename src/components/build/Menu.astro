@@ -11,7 +11,7 @@ const currentUrl = Astro.url?.pathname;
   <div
     class="fixed inset-x-0 bottom-6 rounded-md max-w-full mx-4 p-3 bg-header dark:bg-header-dark backdrop-blur-lg"
   >
-    <div class="grid grid-cols-6 gap-4 items-center">
+    <div class="grid grid-cols-6 gap-4 z-50 items-center">
       {
         mobileMenuIcons.map((menu) => (
           <Link
@@ -26,20 +26,20 @@ const currentUrl = Astro.url?.pathname;
       <Button id="toggleButton" variant="ghost">
         <Icon name="icons/More - Outline" class="text-2xl" />
       </Button>
-
-      <!-- <Button id="darkModeToggle" variant="ghost">
-        <Icon name="icons/More - Outline" class="text-2xl" />
-      </Button> -->
-
-      <div
-        id="toggleDiv"
-        class="hidden absolute h-48 -top-52 rounded-md right-0 left-0 p-3 bg-header dark:bg-header-dark"
-      >
-        <div class="bg-neutral-500 dark:bg-neutral-900">
-          Hello
-        </div>
-      </div>
     </div>
+
+    <div
+      id="drawer"
+      class="rounded-md fixed top-0 left-0 right-0 min-h-1/2 bg-[rgba(0,0,0,.1)] dark:bg-[rgba(0,0,0,.9)] dark:bg-opacity-0 shadow-lg transform -translate-y-full transition-transform duration-500 ease-in-out p-4 space-y-2 "
+    >
+      <a href="/stack">
+        <Button variant="secondary" className="w-full">Tech Stack</Button>
+      </a>
+      <Button id="darkModeToggle" variant="secondary" className="w-full">
+        Toggle Mode Hello</span>
+      </Button>
+    </div>
+
   </div>
 </header>
 
@@ -56,6 +56,7 @@ const currentUrl = Astro.url?.pathname;
 
   window.addEventListener("DOMContentLoaded", () => {
     const currentTheme = $currentTheme.get();
+    console.log(currentTheme);
 
     if (currentTheme === null) {
       $setThemePreference("dark");
@@ -69,12 +70,16 @@ const currentUrl = Astro.url?.pathname;
     });
   }
 
-  document.getElementById("toggleButton")?.addEventListener("click", () => {
-    let toggleDiv = document.getElementById("toggleDiv");
-    if (toggleDiv?.classList.contains("hidden")) {
-      toggleDiv.classList.remove("hidden");
-    } else {
-      toggleDiv?.classList.add("hidden");
-    }
-  });
+  document
+    .getElementById("toggleButton")
+    ?.addEventListener("click", function () {
+      var drawer = document.getElementById("drawer");
+      if (drawer?.classList.contains("translate-y-48")) {
+        drawer.classList.remove("translate-y-48");
+        drawer.classList.add("-translate-y-full");
+      } else {
+        drawer?.classList.remove("-translate-y-full");
+        drawer?.classList.add("translate-y-48");
+      }
+    });
 </script>
