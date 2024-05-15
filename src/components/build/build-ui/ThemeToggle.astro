@@ -2,20 +2,13 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<div class="inline-flex items-center">
-  <div></div>
-  <!-- <Icon class="w-4 h-4 mr-2" name="icons/Sun" /> -->
-  <select name="themeSwitch" id="themeSwitch">
+<p class="text-4xl text-red-600">Helo</p>
+<div class="flex items-center justify-center h-24 bg-gray-100">
+  <select name="themeSwitch" id="themeSwitch" class="block w-1/3 px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 hover:bg-gray-50 sm:text-sm transition duration-200 ease-in-out">
     <option value="system">System</option>
     <option value="dark">Dark</option>
-    <option value="light">
-        <Icon class="w-4 h-4 mr-2" name="icons/Sun"/>
-        Light
-    </option>
+    <option value="light">Light</option>
   </select>
-
-  <button id="themeSwitch">Update icon</button>
-  <!-- use like three buttons to rep the select values then -->
 </div>
 
 <style>
@@ -25,6 +18,11 @@ import { Icon } from "astro-icon/components";
 </style>
 
 <script>
+  const system = document.getElementById("system")
+  const dark = document.getElementById("dark")
+  const light = document.getElementById("light")
+  const divValue: any = document.getElementById("value")
+
   const themeSwitch = document.getElementById(
     "themeSwitch"
   ) as HTMLSelectElement;
@@ -55,4 +53,5 @@ import { Icon } from "astro-icon/components";
     const select = event.target as HTMLSelectElement;
     updateTheme(select.value);
   });
+
 </script>
