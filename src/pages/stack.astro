@@ -3,6 +3,8 @@ import MobileLogo from "@/components/ui/MobileLogo.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import ContactAction from "@/components/build/Contact";
 import SectionTop from "@/components/build/build-ui/SectionTop.astro";
+import { stackDev } from "@/lib/mobileMenu";
+import { Image } from "astro:assets";
 ---
 
 <MainLayout
@@ -12,10 +14,25 @@ import SectionTop from "@/components/build/build-ui/SectionTop.astro";
   <main class="mb-20 min-h-[40vh]">
     <MobileLogo />
 
-    <SectionTop title="Tech Stack" description="All the devs tools, apps and services i use." />
+    <SectionTop
+      title="Tech Stack"
+      description="All the devs tools, apps and services i use."
+    />
 
-    <section class="max-w-[1024px] mx-auto px-4 py-6" >
+    <section class="max-w-[1024px] mx-auto px-4 py-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {
+          stackDev.map((dev) => (
+            <div class="bg-light-hover dark:bg-dark-hover rounded-md p-8 dark:text-light text-dark flex flex-col items-center gap-4">
+              <img src={`${dev.url}`} alt={`${dev.alt}`} class="h-24 w-24" />
+              <div class="flex items-center gap-8">
+                <p class="font-medium">{dev.title}</p>
+                {/* <p class="bg-light dark:bg-dark p-1 rounded-md text-neutral-400 font-light">{dev.tag}</p> */}
+              </div>
+            </div>
+          ))
+        }
+      </div>
     </section>
-
   </main>
 </MainLayout>

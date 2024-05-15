@@ -35,7 +35,7 @@ interface KnowMe {
 interface FooterLink {
   title: string;
   href: string;
-  target?: string
+  target?: string;
 }
 export const mobileMenuIcons: Icon[] = [
   {
@@ -160,7 +160,6 @@ export const knowMe: KnowMe[] = [
   },
 ];
 
-
 export const footerLinks: FooterLink[] = [
   {
     title: "About",
@@ -199,6 +198,81 @@ export const footerSocials: FooterLink[] = [
   {
     title: "Whatsapp",
     href: "https://wa.me/08105537111?text=Hello",
-    target: "_blank"
+    target: "_blank",
+  },
+];
+
+interface StackDev {
+  title: string;
+  url: string;
+  alt: string;
+  tag: string;
+}
+export const stackDev: StackDev[] = [
+  {
+    title: "Nextjs",
+    url: "src/assets/tech/Nextjs.svg",
+    alt: "Nextjs image",
+    tag: "tech",
+  },
+  {
+    title: "Typescript",
+    url: "src/assets/tech/TypeScript.svg",
+    alt: "typescript image",
+    tag: "tech",
+  },
+  {
+    title: "VSCode",
+    url: "src/assets/tech/VSCode.svg",
+    alt: "VSCode image",
+    tag: "tech",
+  },
+  {
+    title: "Zustand",
+    url: "src/assets/tech/Zustand.svg",
+    alt: "Zustand image",
+    tag: "tech",
+  },
+  {
+    title: "Vercel",
+    url: "src/assets/tech/Vercel.svg",
+    alt: "Vercel image",
+    tag: "tech",
+  },
+  {
+    title: "TailwindCSS",
+    url: "src/assets/tech/TailwindCSS.svg",
+    alt: "TailwindCSS image",
+    tag: "tech",
+  },
+  {
+    title: "Github",
+    url: "src/assets/tech/Github.svg",
+    alt: "Github image",
+    tag: "tech",
+  },
+  {
+    title: "Sanity",
+    url: "src/assets/tech/Sanity.svg",
+    alt: "Sanity image",
+    tag: "tech",
+  },
+  {
+    title: "React Hook Form",
+    url: "src/assets/tech/React Hook Form.svg",
+    alt: "React Hook Form image",
+    tag: "tech",
+  },
+  {
+    title: "React Query",
+    url: "src/assets/tech/React Query.svg",
+    alt: "React Query image",
+    tag: "tech",
+  },
+  {
+    title: "Zod",
+    url: "src/assets/tech/Zod.svg",
+    alt: "Zod image",
+    tag: "tech",
   },
 ];
