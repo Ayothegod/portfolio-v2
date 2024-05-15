@@ -8,9 +8,7 @@
 - visit the headers again and update correctly and add that header and footer bg gradient
 
 - update project icons and all
-- write first blog
 - update contact data and icons and also send first email
-- all all stack data
 
 - find my own images for notebook, stack and project
 - also, i need my picture

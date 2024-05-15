@@ -117,7 +117,7 @@ export const mockProjects: Project[] = [
   {
     id: 2,
     icon: "icons/Discord",
-    image: "src/assets/tech/Parrotxt.png",
+    image: "src/assets/tech/subbi.png",
     title: "AsciiFolders",
     description:
       "Generate ASCII directory trees from any folder on your machine, customize the way the tree looks, how deep it should go and whether or not to include hidden files",

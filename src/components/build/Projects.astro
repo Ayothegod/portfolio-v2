@@ -1,65 +1,58 @@
 ---
 import { mockProjects } from "@/lib/mobileMenu";
 import { Icon } from "astro-icon/components";
+
 ---
 
-<!-- <section class="mt-20 md:mt-32 lg:mt-40">
-  <h2 class="text-3xl md:text-5xl font-bold text-dark dark:text-light">Selected Work</h2> -->
-  <div class="mt-4 flex flex-col gap-8">
-    {
-      mockProjects.map((project) => (
-        <div class="group box flex gap-10">
-          <div class="flex flex-col gap-4 p-4 sm:p-8 md:p-10 md:w-1/2 md:py-10">
-            <Icon name={project.icon} class="text-6xl shadow-inner" />
-            <h2 class="font-extrabold text-black dark:text-white text-2xl md:text-3xl ">
-              {project.title}
-            </h2>
-            <p class="mt-2 leading-6 text-sm md:text-base">{project.description}</p>
-            <div class="flex items-center justify-between mt-auto ">
-              <div class="flex items-center gap-2 text-black dark:text-white font-medium text-sm">
-                <p class="group-hover:border-b group-hover:border-red-600 group-hover:transition-transform">Visit App</p>
-                {/* <a href={project.link}>
+<div class="mt-4 flex flex-col gap-8">
+  {
+    mockProjects.map((project) => (
+      <div class="group box flex gap-10">
+        <div class="flex flex-col gap-4 p-4 sm:p-8 md:p-10 md:w-1/2 md:py-10">
+          <Icon name={project.icon} class="text-6xl shadow-inner" />
+          <h2 class="font-extrabold text-black dark:text-white text-2xl md:text-3xl ">
+            {project.title}
+          </h2>
+          <p class="mt-2 leading-6 text-sm md:text-base">
+            {project.description}
+          </p>
+          <div class="flex items-center justify-between mt-auto ">
+            <div class="flex items-center gap-2 text-black dark:text-white font-medium text-sm">
+              <p class="group-hover:border-b group-hover:border-red-600 group-hover:transition-transform">
+                Visit App
+              </p>
+              <a href={project.link}>
                   <Icon
                     name="icons/Arrow Right-Fill"
                     class="text-base md:text-lg transition-transform duration-200 ease-in-out hover:translate-x-1"
                   />
-                </a> */}
-              </div>
-              <div class="flex items-center gap-2 text-black dark:text-white font-medium text-sm">
-                <p>Github</p>
-                <a href={project.link} class="">
-                  <Icon
-                    id="iconId"
-                    name="icons/Arrow Right"
-                    class="text-base md:text-lg dark:text-white transition-transform duration-200 ease-in-out hover:translate-x-1 "
-                  />
                 </a>
-              </div>
+            </div>
+            <div class="flex items-center gap-2 text-black dark:text-white font-medium text-sm">
+              <p>Github</p>
+              <a href={project.link} class="">
+                <Icon
+                  id="iconId"
+                  name="icons/Arrow Right"
+                  class="text-base md:text-lg dark:text-white transition-transform duration-200 ease-in-out hover:translate-x-1 "
+                />
+              </a>
             </div>
           </div>
-
-          <div class="hidden md:flex md:items-start ml-auto md:w-1/2 h-[400px] overflow-hidden">
-            <img
-              src={project.image}
-              alt=""
-              class=" transition-transform duration-300 ease-in-out hover:-rotate-6 hover:scale-110"
-            />
-          </div>
         </div>
-      ))
-    }
-  </div>
-<!-- </section> -->
+
+        <div class="hidden md:flex md:items-start ml-auto md:w-1/2 h-[400px] overflow-hidden">
+          <img
+            src={project.image}
+            alt=""
+            class=" transition-transform duration-300 ease-in-out hover:-rotate-6 hover:scale-110"
+          />
+        </div>
+      </div>
+    ))
+  }
+</div>
 
 <script>
-  // function updateIcon() {
-  //             const icon = document.getElementById("iconId");
-  //             const darkMode = localStorage.getItem("theme") === "true";
-  //             if (darkMode) {
-  //                 icon?.name = "icons/Behance.svg"; // Path to dark mode SVG file
-  //             } else {
-  //                 icon.src = "icons/Behance.svg"; // Path to light mode SVG file
-  //             }
-  //         }
-  //         updateIcon();
+
 </script>
